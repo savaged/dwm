@@ -70,6 +70,8 @@ static Key keys[] = {
     { MODKEY|ShiftMask,             XK_p,      spawn,          {.v = passmenucmd } },
     { MODKEY|ShiftMask,             XK_m,      spawn,          {.v = clipmenucmd } },
     { MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
+    { MODKEY|ShiftMask,             XK_n,      spawn,          SHCMD("pcmanfm") },
+    { MODKEY|ShiftMask,             XK_b,      spawn,          SHCMD("waterfox") },
     { MODKEY,                       XK_b,      togglebar,      {0} },
     { MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
     { MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
