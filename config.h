@@ -72,6 +72,8 @@ static Key keys[] = {
     { MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
     { MODKEY|ShiftMask,             XK_n,      spawn,          SHCMD("pcmanfm") },
     { MODKEY|ShiftMask,             XK_b,      spawn,          SHCMD("waterfox") },
+    { MODKEY|ShiftMask,             XK_t,      spawn,          SHCMD("notify-now") },
+    { MODKEY,                       XK_Escape, spawn,          SHCMD("i3lock -c 000000") },
     { MODKEY,                       XK_b,      togglebar,      {0} },
     { MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
     { MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
