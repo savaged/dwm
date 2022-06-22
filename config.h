@@ -60,7 +60,8 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[]    = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
-static const char *roficmd[]     = { "rofi", "-show", "drun", "-show-icons", NULL };
+static const char *rofidruncmd[] = { "rofi", "-show", "drun", "-show-icons", NULL };
+static const char *rofiruncmd[]  = { "rofi", "-show", "run", NULL };
 static const char *passmenucmd[] = { "passmenu", NULL };
 static const char *clipmenucmd[] = { "clipmenu", NULL };
 static const char *termcmd[]     = { "kitty", NULL };
@@ -72,7 +73,8 @@ static const char *mutevol[] = { "/usr/bin/pactl", "set-sink-mute",   "0", "togg
 static Key keys[] = {
     /* modifier                     key                        function        argument */
     { MODKEY,                       XK_p,                      spawn,          {.v = dmenucmd } },
-    { MODKEY,                       XK_Menu,                   spawn,          {.v = roficmd } },
+    { MODKEY,                       XK_Menu,                   spawn,          {.v = rofidruncmd } },
+    { MODKEY|ShiftMask,             XK_Menu,                   spawn,          {.v = rofiruncmd } },
     { MODKEY|ShiftMask,             XK_p,                      spawn,          {.v = passmenucmd } },
     { MODKEY|ShiftMask,             XK_m,                      spawn,          {.v = clipmenucmd } },
     { MODKEY|ShiftMask,             XK_Return,                 spawn,          {.v = termcmd } },
